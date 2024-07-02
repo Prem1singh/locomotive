@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: black;
+}
+.nav{
+    position: absolute;
+    top: 30;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 30px 50px;
+}
+.page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #F5E41B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.page1 .title{
+    font-size: 100px;
+    font-weight: 100;
+    line-height: 80px;
+    user-select: none;
+}
+
+.loader{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    overflow: hidden;
+}
+.loader .startpage{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #F5E41B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+  
+}
+.video{
+    width: 100%;
+    height: 100vh;
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+.endpage{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transform: translateY(100%);
+    background-color: #F5E41B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 7;
+}
+.loader .title{
+    font-size: 100px;
+    font-weight: 100;
+    line-height: 80px;
+}
+.page2{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.ele{
+    position: relative;
+    width: 100%;
+}
+.ele h2{
+    font-size: 90px;
+    text-transform: uppercase;
+    font-weight: 100;
+    transition: 0,5s all linear;
+    text-align: center;
+    z-index: 5;
+    position: relative;
+    cursor: pointer;
+}
+
+.elepart{
+  text-align: center;
+   position: absolute;
+   top: 50%;
+ 
+   transform: scaleY(0) translateY(-50%) ;
+    display: inline-block;
+   background-color: #F5E41B;
+   padding: 10px;
+   width: 100%;
+   z-index: 1;
+
+  transition: .3s all linear
+}
+.eleback{
+    width: 40%;
+    height: 40px;
+    background-color:#F5E41B;
+    box-shadow: 10px 0px 5px #F5E41B, -10px 0px 5px #F5E41B;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scaleY(0) translate(-50%,-50%) ;
+    z-index: 2;
+    transition: .3s all linear
+
+}
+.elepart .elechild{
+    display: inline-block;
+    padding: 0px 20px;
+    color: black;
+
+}
+.ele:hover h2{
+    font-style: italic;
+}
+.ele:hover .elepart{
+    transform: scaleY(1) translateY(-35%) ;
+}
+.ele:hover .eleback{
+    transform: scaleY(1)  translate(-50%,-35%) ;
+}
+.page3{
+    display: flex;
+    align-items: flex-start;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: white;
+    padding: 30px;
+    gap: 20px;
+}
+
+.box{
+    width: 455px;
+    height: 500px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s all linear;
+}
+
+.page3 .box .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.122);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    transition: 0.5s all linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+
+}
+.page3 .box .overlay h2{
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    font-size: 40px;
+    opacity: 0;
+    transition: 0.5s all linear;
+    text-transform: uppercase;
+}
+.page3 .box:hover img{
+    transform: scale(1.1);
+}
+.page3 .box:hover .overlay{
+    background-color: black;
+}
+.page3 .box:hover .overlay h2{
+    opacity: 1;
+}
+footer{
+    background-color: white;
+
+    width: 100%;
+}
+.backto{
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+.back{
+    display: inline-block;
+    cursor: pointer;
+}
+.backto i{
+    font-size: 35px;
+}
+.foot{
+    background-color: black;
+    color: white;
+    padding: 40px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.foot div{
+    display: flex;
+    text-transform: uppercase;
+    gap: 20px;
+}
